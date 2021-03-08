@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+
+/* le parent en positionnement relative */
+
+.wrapper {
+    position: relative;
+}
+
+
+/* l'enfant en positionnement absolue */
+
+.link-hover {
+    margin-top: 150px;
+    position: absolute;
+    display: inline-flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .link-hover a {
+    margin-right: 5px;
+    width: 150px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid brown;
+    position: relative;
+}
+
+a:hover {
+    color: #fff;
+}
+
+a span {
+    position: absolute;
+    background: brown;
+    z-index: -1;
+    transition: 0.8s ease-in-out;
+}
+
+.to-right {
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 79px;
+}
+
+a:hover .to-right {
+    width: 149px;
+    transition: 0.8s;
+}
+
+.to-left {
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 79px;
+}
+
+a:hover .to-left {
+    width: 149px;
+    transition: 0.8s;
+}
+
+.to-top {
+    bottom: 0;
+    right: 0;
+    width: 149px;
+    height: 0px;
+}
+
+a:hover .to-top {
+    height: 79px;
+    transition: 0.8s;
+}
+
+.to-buttom {
+    top: 0;
+    right: 0;
+    width: 149px;
+    height: 0px;
+}
+
+a:hover .to-buttom {
+    height: 79px;
+    transition: 0.8s;
+}
+
+.to-diagonal {
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+}
+
+a:hover .to-diagonal {
+    height: 79px;
+    width: 149px;
+    transition: 0.8s;
+}
